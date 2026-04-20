@@ -6,10 +6,23 @@
   --color-blue-100: #0098DA;
   --color-blue-200: #3E4095;
   --color-blue-300: #14142F;
+  --color-blue-400: #1F2168;
   --color-yellow-100: #FFCC29;
   --color-pink-100: #EC268F;
+
+  /* Breakpoints */
+
+  --breakpoint-xs: 400px;
+  --breakpoint-3xl: 1680px;
+  --breakpoint-4xl: 2200px;
 }
 
+@utility padding-container {
+  @apply px-6 lg:px-20 3xl:px-0;
+}
+
+
 body {
-  
+  max-width: 1480px;
+  margin: 0 auto;
 }
