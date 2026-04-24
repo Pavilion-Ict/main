@@ -21,7 +21,7 @@ const ServiceCard = ({ ServiceText, src, alt, width, height }: ServiceCardProps)
               className='w-full h-auto transition-transform duration-300 group-hover:scale-110'
             />
         </div>
-        <p className='font-bold text-lg text-blue-400'>{ServiceText}</p>
+        <p className='font-semibold text-lg'>{ServiceText}</p>
     </div>
   )
 }
