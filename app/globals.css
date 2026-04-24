@@ -9,6 +9,13 @@
   --color-blue-400: #1F2168;
   --color-yellow-100: #FFCC29;
   --color-pink-100: #EC268F;
+  --color-pink-200: #ED3883;
+  --color-pink-300: #EE3884;
+  --color-pink-400: #EE417E;
+
+
+  --color-orange-100: #F78951;
+  --color-orange-200: #F78853;
 
   /* Breakpoints */
 
@@ -18,7 +25,7 @@
 }
 
 @utility padding-container {
-  @apply px-6 lg:px-20 3xl:px-0;
+  @apply px-4 md:px-13 3xl:px-0;
 }
 
 

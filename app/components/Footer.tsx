@@ -4,14 +4,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="  p-15 bg-linear-to-r  from-blue-200 to-blue-300">
+    <div className=" w-full  p-15 bg-linear-to-r  from-blue-200 to-blue-300">
       <Image
         src="/logo-white.png"
         height={120}
         width={120}
         alt="Pavilion White"
       />
-      <div className="flex justify-between mt-7 text-white">
+      <div className="flex flex-col md:flex-row justify-between mt-7 text-white">
         <div className="max-w-[400px] flex flex-col gap-4">
           <p className="font-light">
             We provide complete digital, branding, and printing solutions that
@@ -19,13 +19,13 @@ const Footer = () => {
           </p>
           <p className="font-bold underline">12 Akintoba St, Agbowo, Ibadan 200132, Oyo</p>
         </div>
-        <div>
+        <div className="mt-5 md:mt-0">
           <div className="flex gap-6">
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
             <Link href="/gallery">Gallery</Link>
           </div>
-          <div className="flex gap-4 justify-end mt-3">
+          <div className="flex gap-4 md:justify-end mt-3">
             <Image
               src="/instagram.png"
               height={30}

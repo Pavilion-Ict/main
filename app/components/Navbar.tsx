@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full h-16 px-4 md:px-8 flex items-center justify-between text-[18px] relative ${inter.className}`}
+      className={`w-full h-16 px-4 md:px-13 flex items-center justify-between text-[18px] relative ${inter.className}`}
     >
       <div className="flex items-center">
         <Image src="/Pavilion.svg" alt="Pavilion logo" width={100} height={100} className="md:w-[120px]" />
