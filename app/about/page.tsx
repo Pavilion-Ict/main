@@ -138,7 +138,7 @@ const page = () => {
           </Link>
          </div>
         </section>
-        <section className="bg-gradient-to-br from-blue-400 to-blue-200 rounded-2xl p-8 my-5">
+        <section className="bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl p-8 my-5">
   <div className="text-center mb-8">
     <h2 className="text-3xl font-extrabold uppercase tracking-widest text-white mb-2">
       Meet Our Team
@@ -155,9 +155,10 @@ const page = () => {
       alt="Al-Ameen"
       name="Al-Ameen Oladejo"
       role="Founder / Product Manager"
-      linkedIn="https://www.linkedin.com/in/wizdomola?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+      email=""
       height={100}
       width={200}
+      position ={1}
     />
     <TeamMemberCard
       src="/Wisdom_C.png"
@@ -166,18 +167,31 @@ const page = () => {
       role="Operation/Sales Manager & Video Editor"
       height={100}
       width={200}
-      linkedIn="https://www.linkedin.com/in/wisdom-onumaegbulam-ba258131b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+      position ={1}
+      email=""
     />
-      <TeamMemberCard
-      src="/Ojie_Joseph.png"
-      alt="Ojie Joseph"
-      name="Ojie Joseph"
-      role="Graphic and Product Design"
+    <TeamMemberCard
+      src="/Ajadi_Ire.png"
+      alt="Ajadi_Ire"
+      name="Ajadi Ireanuoluwa Heritage"
+      role="Lead Product Developer"
       height={100}
       width={200}
-      linkedIn=""
+      email="ireanuoluwah@gmail.com"
+      position ={2}
   
     />
+    <TeamMemberCard
+    src="/Ojie_Joseph.png"
+    alt="Ojie Joseph"
+    name="Ojie Joseph"
+    role="Graphic and Product Design"
+    height={100}
+    width={200}
+    email=""
+    position ={2}
+
+  />
   </div>
 </section>
               </div>
