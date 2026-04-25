@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Navbar from "../components/Navbar";
 import AboutCard from "../components/AboutCard";
 import Footer from "../components/Footer";
 import Link from "next/link";
@@ -12,7 +11,7 @@ const futura = localFont({
   variable: "--font-futura",
 });
 
-const page = () => {
+const AboutPage = () => {
   return (
     <>
       <div className="padding-container flex flex-col items-center">
@@ -132,4 +131,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AboutPage;

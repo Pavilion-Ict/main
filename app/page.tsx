@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Whoarewe from "./components/Whoarewe";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
+import Testimony from "./components/Testimony";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero/>
       <Whoarewe />
       <Services />
+      <Testimony/>
       <Footer />
     </>
   );
