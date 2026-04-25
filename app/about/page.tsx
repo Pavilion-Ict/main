@@ -123,7 +123,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-br from-blue-400 to-blue-200 rounded-2xl p-8 my-5">
+        <section className="bg-gradient-to-br from-blue-200 to-blue-300 rounded-2xl p-8 my-5">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-extrabold uppercase tracking-widest text-white mb-2">
               Meet Our Team
@@ -141,9 +141,10 @@ const AboutPage = () => {
               alt="Al-Ameen"
               name="Al-Ameen Oladejo"
               role="Founder / Product Manager"
-              linkedIn="https://www.linkedin.com/in/wizdomola?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+              email=""
               height={100}
               width={200}
+              position={1}
             />
             <TeamMemberCard
               src="/Wisdom_C.png"
@@ -152,7 +153,18 @@ const AboutPage = () => {
               role="Operation/Sales Manager & Video Editor"
               height={100}
               width={200}
-              linkedIn="https://www.linkedin.com/in/wisdom-onumaegbulam-ba258131b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              position={1}
+              email=""
+            />
+            <TeamMemberCard
+              src="/Ajadi_Ire.png"
+              alt="Ajadi_Ire"
+              name="Ajadi Ireanuoluwa Heritage"
+              role="Lead Product Developer"
+              height={100}
+              width={200}
+              email="ireanuoluwah@gmail.com"
+              position={2}
             />
             <TeamMemberCard
               src="/Ojie_Joseph.png"
@@ -161,7 +173,8 @@ const AboutPage = () => {
               role="Graphic and Product Design"
               height={100}
               width={200}
-              linkedIn=""
+              email=""
+              position={2}
             />
           </div>
         </section>
@@ -177,7 +190,7 @@ const AboutPage = () => {
 
           <div className="mt-5 mb-20  ">
             <Link
-              className="text-white font-bold text-lg  px-5 py-3 rounded-2xl bg-linear-to-r from-yellow-100 to-pink-400"
+              className="text-white  px-5 py-3 rounded-2xl bg-linear-to-r from-yellow-100 to-pink-400"
               href=""
             >
               Contact us
