@@ -3,25 +3,44 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Inter } from "next/font/google";
+import { usePathname } from "next/navigation"; // Import this
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); // Get the current path
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "About Us", href: "/about" },
+  ];
 
   return (
-    <nav
-      className={`w-full h-16 px-4 md:px-13 flex items-center justify-between text-[18px] relative ${inter.className}`}
-    >
+    <nav className={`w-full h-16 px-4 md:px-13 flex items-center justify-between text-[18px] relative ${inter.className}`}>
       <div className="flex items-center">
         <Image src="/Pavilion.svg" alt="Pavilion logo" width={100} height={100} className="md:w-[120px]" />
       </div>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex flex-row gap-8">
-        <Link href="/" className="hover:text-blue-200 transition-colors">Home</Link>
-        <Link href="/gallery" className="hover:text-blue-200 transition-colors">Gallery</Link>
-        <Link href="/about" className="hover:text-blue-200 transition-colors">About Us</Link>
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link 
+              key={link.href} 
+              href={link.href} 
+              className={`relative transition-colors hover:text-blue-400 ${isActive ? 'text-blue-400 font-medium' : 'text-black'}`}
+            >
+              {link.name}
+              {/* Active Underline */}
+              {isActive && (
+                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-blue-400 rounded-full" />
+              )}
+            </Link>
+          );
+        })}
       </div>
 
       <div className="hidden md:block bg-linear-to-r from-blue-200 to-blue-300 p-[1.3px] rounded-full">
@@ -43,9 +62,22 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <Link href="/" onClick={() => setIsOpen(false)} className="text-2xl font-semibold">Home</Link>
-        <Link href="/gallery" onClick={() => setIsOpen(false)} className="text-2xl font-semibold">Gallery</Link>
-        <Link href="/about" onClick={() => setIsOpen(false)} className="text-2xl font-semibold">About Us</Link>
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link 
+              key={link.href}
+              href={link.href} 
+              onClick={() => setIsOpen(false)} 
+              className={`text-2xl font-semibold relative ${isActive ? 'text-blue-400' : ''}`}
+            >
+              {link.name}
+              {isActive && (
+                <span className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-8 h-1 bg-blue-400 rounded-full" />
+              )}
+            </Link>
+          );
+        })}
         <div className="bg-linear-to-r from-blue-200 to-blue-300 p-[1.3px] rounded-full mt-4">
           <button className="bg-white px-8 py-3 rounded-full w-full font-bold text-xl">
             Contact Us
