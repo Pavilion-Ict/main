@@ -8,7 +8,22 @@ import Link from "next/link";
 import localFont from "next/font/local";
 import TeamMemberCard from "../components/TeamMemberCard";
 import { motion } from "framer-motion";
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    whileinview: {
+      staggerChildren: 0.3,
+      delaychildren: 0.2
+    }
+  }
+};
 
+const item = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: { opacity: 1, scale: 1 },
+  transition:{duration:0.5, ease:"easeout"}
+};
 const futura = localFont({
   src: "../fonts/futuramdbt_bold.otf",
   display: "swap",
@@ -93,8 +108,8 @@ const AboutPage = () => {
                 Explore how Pavilion drives impact through these core solutions.
               </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-10 mt-10">
-              <div className="w-full md:w-1/3">
+            <motion.ul variants={container} initial="hidden" animate="show" className="flex flex-col md:flex-row gap-10 mt-10">
+              <motion.li variants={item} className="w-full md:w-1/3">
                 <Image
                   src="/team-image-1.png"
                   height={2000}
@@ -112,8 +127,8 @@ const AboutPage = () => {
                   projects—we deliver solutions that work, scale, and stand the
                   test of time.
                 </p>
-              </div>
-              <div className="w-full md:w-1/3">
+              </motion.li>
+              <motion.li variants={item} className="w-full md:w-1/3">
                 <Image
                   src="/team-image-2.png"
                   height={2000}
@@ -134,8 +149,8 @@ const AboutPage = () => {
                   just execute projects—we deliver solutions that work, scale,
                   and stand the test of time.
                 </p>
-              </div>
-              <div className="w-full md:w-1/3">
+              </motion.li>
+              <motion.li variants={item} className="w-full md:w-1/3">
                 <Image
                   src="/team-image-3.png"
                   height={2000}
@@ -154,8 +169,8 @@ const AboutPage = () => {
                   that are both accessible and tailored to meet the unique needs
                   of each client.
                 </p>
-              </div>
-            </div>
+              </motion.li>
+            </motion.ul>
           </section>
         </motion.div>
 
@@ -171,7 +186,7 @@ const AboutPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <TeamMemberCard
               src="/Al-Ameen Oladejo.png"
               alt="Al-Ameen"
