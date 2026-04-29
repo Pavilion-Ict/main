@@ -71,7 +71,7 @@ const CarouselItem = ({ color, header, text, image }: CarouselProps) => {
                     >
                         EXPLORE
                     </Link>
-                    <Link className="text-sm underline font-medium" href="/works">
+                    <Link className="text-sm underline font-medium" href="/gallery">
                         See Our Works
                     </Link>
                 </div>

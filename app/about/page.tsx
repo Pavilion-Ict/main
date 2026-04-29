@@ -248,7 +248,7 @@ const AboutPage = () => {
           <div className="mt-5 mb-20  ">
             <Link
               className="text-white font-semibold text-lg px-7 py-3 rounded-2xl bg-linear-to-r from-yellow-100 to-pink-400"
-              href=""
+              href="https://wa.me/+2348188549945"
             >
               Contact us
             </Link>

@@ -16,20 +16,13 @@ const portfolioItems: PortfolioItem[] = [
     image: "/gallery-1.png",
     description:
       "A vibrant visual identity designed for campus-based creative groups.",
-  },
-  {
-    id: 2,
-    title: "Fast and Steady",
-    category: "Branding",
-    image: "/path-to-cheetah.jpg",
-    description:
-      "Brand identity focusing on speed and reliability for logistics.",
-  },
-  // Add more items here...
+  }
+
 ];
 
 import React, { useState } from "react";
 import { Search, Info, X } from "lucide-react";
+import Link from "next/link";
 
 const PavilionPortfolio = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
@@ -93,9 +86,9 @@ const PavilionPortfolio = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mb-12 p-1 bg-[#dadada] rounded-2xl px-4 py-3 flex items-center gap-10 pr-8">
-        <button className="bg-gradient-to-r from-orange-400 to-pink-500 text-white px-8 py-3 rounded-full  flex items-center gap-2">
+        <Link href="https://wa.me/+2348188549945" className="bg-gradient-to-r from-orange-400 to-pink-500 text-white px-8 py-3 rounded-full  flex items-center gap-2">
           Get Yours Done <span className="text-xl">➔</span>
-        </button>
+        </Link>
         <p className="hidden md:block text-xs ">
           Get Your Work Done Faster And Smarter. We Provide The Tools And
           Support You Need To Turn Ideas Into Results.
@@ -122,7 +115,7 @@ const PavilionPortfolio = () => {
               </div>
             </div>
             <p className="text-sm font-medium text-gray-500">
-              Pavilion {item.category}
+              {item.title}
             </p>
           </div>
         ))}

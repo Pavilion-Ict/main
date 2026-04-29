@@ -52,7 +52,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-5 mt-8 items-center justify-center lg:justify-start">
               <Link
-                href="/contact"
+                href="https://wa.me/+2348188549945"
                 className="w-full sm:w-auto text-center bg-linear-to-r from-blue-200 to-blue-300 font-semibold text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all"
               >
                 Book A Consultation
