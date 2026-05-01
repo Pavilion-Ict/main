@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -6,7 +7,6 @@ const montserrat = Montserrat({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "Pavilion",
@@ -23,7 +23,19 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Script id="tawk-to-script" strategy="afterInteractive">
+          {`var Tawk_API=Tawk_API||{}; var Tawk_LoadStart=new Date(); (function(){
+            var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/69f3433d81f6d41c3ddd1bd9/1jnf3taib';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','anonymous');
+            s0.parentNode.insertBefore(s1,s0);
+          })();`}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
