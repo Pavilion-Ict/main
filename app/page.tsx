@@ -10,6 +10,7 @@ import HeroCarousel from "./components/HeroCarousel";
 import { motion } from "framer-motion";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 export default function Home() {
+  const noop = () => {};
   return (
     <>
       <motion.div
@@ -57,6 +58,26 @@ export default function Home() {
       <TawkMessengerReact
         propertyId="69f3433d81f6d41c3ddd1bd9"
         widgetId="1jnf3taib"
+ // Core Handlers
+      onLoad={noop}
+      onBeforeLoad={noop}
+      onStatusChange={noop}
+      // Window Handlers
+      onChatMaximized={noop}
+      onChatMinimized={noop}
+      onChatHidden={noop}
+      onChatShown={noop}
+      // Messaging Handlers
+      onChatStarted={noop}
+      onChatFinished={noop}
+      onChatMessageVisitor={noop}
+      onChatMessageAgent={noop}
+      onAgentJoinChat={noop}
+      onAgentLeaveChat={noop}
+      onUnreadCountChanged={noop}
+      // Form Handlers
+      onPrechatSubmit={noop}
+      onOfflineSubmit={noop}
       />
     </>
   );
