@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -9,6 +8,7 @@ import Footer from "./components/Footer";
 import Testimony from "./components/Testimony";
 import HeroCarousel from "./components/HeroCarousel";
 import { motion } from "framer-motion";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 export default function Home() {
   return (
     <>
@@ -54,6 +54,10 @@ export default function Home() {
       >
         <Footer />
       </motion.div>
+      <TawkMessengerReact
+        propertyId="69f3433d81f6d41c3ddd1bd9"
+        widgetId="1jnf3taib"
+      />
     </>
   );
 }
