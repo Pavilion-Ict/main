@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Testimony from "./components/Testimony";
 import HeroCarousel from "./components/HeroCarousel";
 import { motion } from "framer-motion";
-import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+import Script from "next/script";
 export default function Home() {
   const noop = () => {};
   return (
@@ -55,30 +55,16 @@ export default function Home() {
       >
         <Footer />
       </motion.div>
-      <TawkMessengerReact
-        propertyId="69f3433d81f6d41c3ddd1bd9"
-        widgetId="1jnf3taib"
- // Core Handlers
-      onLoad={noop}
-      onBeforeLoad={noop}
-      onStatusChange={noop}
-      // Window Handlers
-      onChatMaximized={noop}
-      onChatMinimized={noop}
-      onChatHidden={noop}
-      onChatShown={noop}
-      // Messaging Handlers
-      onChatStarted={noop}
-      onChatFinished={noop}
-      onChatMessageVisitor={noop}
-      onChatMessageAgent={noop}
-      onAgentJoinChat={noop}
-      onAgentLeaveChat={noop}
-      onUnreadCountChanged={noop}
-      // Form Handlers
-      onPrechatSubmit={noop}
-      onOfflineSubmit={noop}
-      />
+      <Script id="tawk-to-script" strategy="afterInteractive">
+        {`var Tawk_API=Tawk_API||{}; var Tawk_LoadStart=new Date(); (function(){
+          var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+          s1.async=true;
+          s1.src='https://embed.tawk.to/69f3433d81f6d41c3ddd1bd9/1jnf3taib';
+          s1.charset='UTF-8';
+          s1.setAttribute('crossorigin','*');
+          s0.parentNode.insertBefore(s1,s0);
+        })();`}
+      </Script>
     </>
   );
 }
