@@ -67,11 +67,11 @@ const CarouselItem = ({ color, header, text, image }: CarouselProps) => {
                 <div className="mt-6 flex flex-wrap items-center gap-4">
                     <Link 
                         className='px-8 py-3 bg-blue-200 hover:bg-blue-400 transition-colors rounded-lg font-semibold text-white inline-block' 
-                        href="/gallery"
+                        href="/portfolio"
                     >
                         EXPLORE
                     </Link>
-                    <Link className="text-sm underline font-medium" href="/gallery">
+                    <Link className="text-sm underline font-medium" href="/portfolio">
                         See Our Works
                     </Link>
                 </div>

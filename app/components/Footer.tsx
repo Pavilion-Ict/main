@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex gap-6">
             <Link href="/">Home</Link>
             <Link href="/about">About Us</Link>
-            <Link href="/gallery">Gallery</Link>
+            <Link href="/portfolio">Portfolio</Link>
           </div>
           <div className="flex gap-4 md:justify-end mt-3">
             <Image
@@ -57,7 +57,7 @@ const Footer = () => {
 
       <div className="flex justify-between">
         <p className="text-center text-white">
-          &copy; {new Date().getFullYear()} Pavilion. All rights reserved.
+          &copy; {new Date().getFullYear()} Pavilion Tech Solutions Ltd.
         </p>
         <div>
           <Link href="/" className="text-white hover:underline">

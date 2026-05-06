@@ -58,7 +58,7 @@ const Hero = () => {
                 Book A Consultation
               </Link>
               <Link
-                href="/gallery"
+                href="/portfolio"
                 className="font-semibold hover:underline decoration-blue-200 decoration-2 underline-offset-4"
               >
                 See our works
@@ -141,7 +141,7 @@ const Hero = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="border border-blue-200 rounded-xl flex flex-col md:flex-row justify-center items-center gap-8 md:gap-10 p-6 md:p-8 mt-24 lg:mt-20 w-[90%] lg:w-[70%] mx-auto">
+      <div className="border border-blue-200 rounded-xl flex flex-col md:flex-row justify-center items-center gap-8 md:gap-10 p-6 md:p-6 mt-24 lg:mt-20 w-[90%] lg:w-[70%] mx-auto">
         <div className="flex gap-4 items-center">
           <Image
             src="/laurel.png"
@@ -168,7 +168,7 @@ const Hero = () => {
           <h2
             className={`${futura.className} text-sm md:text-base bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-300 font-bold uppercase tracking-tight`}
           >
-            200+ SATISFIED <br className="hidden md:block" /> CUSTOMERS
+            1000+ SATISFIED <br className="hidden md:block" /> CUSTOMERS
           </h2>
         </div>
       </div>

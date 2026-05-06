@@ -94,7 +94,7 @@ const PavilionPortfolio = () => {
           Support You Need To Turn Ideas Into Results.
         </p>
       </div>
-      {/* Gallery Grid */}
+      {/* Portfolio Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {portfolioItems.map((item) => (
           <div

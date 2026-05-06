@@ -61,7 +61,7 @@ const Whoarewe = () => {
           >
             Book A Consultation
           </Link>
-          <Link href="/gallery" className="font-semibold text-base md:text-lg hover:underline decoration-blue-200 decoration-2 underline-offset-4">
+          <Link href="/portfolio" className="font-semibold text-base md:text-lg hover:underline decoration-blue-200 decoration-2 underline-offset-4">
             See our works
           </Link>
         </div>
