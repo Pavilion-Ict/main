@@ -99,7 +99,7 @@ const AboutPage = () => {
             <div className="flex flex-col items-center">
               <h2 className={`${futura.className} text-4xl`}>WHY CHOOSE</h2>
               <Image
-                src="/pavilion.svg"
+                src="/pavilion.png"
                 height={220}
                 width={220}
                 alt="Paviilion Logo"
