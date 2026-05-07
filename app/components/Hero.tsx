@@ -85,57 +85,77 @@ const Hero = () => {
         </div>
 
         {/* TRUSTED BY Section */}
-        <div className="flex flex-col absolute bg-linear-to-r from-blue-400 to-blue-200 w-[95%] lg:w-[80%] min-h-[100px] lg:h-[120px] rounded-xl bottom-[-60px] lg:bottom-[-30px] left-[2.5%] lg:left-[10%] py-4 px-2 shadow-xl z-20">
-          <div className="flex items-center justify-center gap-2 mb-2 lg:mb-4">
+        <div className="flex flex-col absolute bg-linear-to-r from-blue-400 to-blue-200 w-[95%] lg:w-[80%] min-h-[120px] lg:h-[150px] rounded-xl bottom-[-60px] lg:bottom-[-30px] left-[2.5%] lg:left-[10%] py-4 px-2 shadow-xl z-20 overflow-hidden">
+          <div className="flex items-center justify-center gap-2 mb-4 lg:mb-6">
             <div className="w-8 md:w-12 border-t border-[#4293EF]"></div>
             <p className="text-white italic text-xs md:text-sm font-medium tracking-widest uppercase">
               TRUSTED BY
             </p>
             <div className="w-8 md:w-12 border-t border-[#4293EF]"></div>
           </div>
-          <div className="flex flex-wrap items-center gap-4 md:gap-8 lg:gap-10 w-full justify-center opacity-90">
-            <Image
-              src="/aiesec.png"
-              alt="Aiesec logo"
-              width={100}
-              height={40}
-              className="h-6 md:h-10 lg:h-12 w-auto object-contain"
-            />
-            <Image
-              src="/jci.png"
-              alt="JCI logo"
-              width={60}
-              height={40}
-              className="h-6 md:h-10 lg:h-12 w-auto object-contain"
-            />
-            <Image
-              src="/trophy.png"
-              alt="Trophy logo"
-              width={60}
-              height={40}
-              className="h-6 md:h-10 lg:h-12 w-auto object-contain"
-            />
-            <Image
-              src="/landrite.png"
-              alt="Landrite logo"
-              width={80}
-              height={40}
-              className="h-6 md:h-10 lg:h-12 w-auto object-contain"
-            />
-            <Image
-              src="/ui.png"
-              alt="UI logo"
-              width={100}
-              height={40}
-              className="h-6 md:h-10 lg:h-12 w-auto object-contain"
-            />
-            <Image
-              src="/jj.png"
-              alt="JJ Classics logo"
-              width={60}
-              height={40}
-              className="h-6 md:h-10 lg:h-12 w-auto object-contain"
-            />
+          
+          <div className="relative flex overflow-hidden">
+            <motion.div 
+              className="flex items-center gap-12 md:gap-20 lg:gap-24 whitespace-nowrap"
+              animate={{
+                x: [0, -1035],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 20,
+                  ease: "linear",
+                },
+              }}
+            >
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex items-center gap-12 md:gap-20 lg:gap-24 shrink-0">
+                  <Image
+                    src="/aiesec.png"
+                    alt="Aiesec logo"
+                    width={120}
+                    height={50}
+                    className="h-8 md:h-12 lg:h-16 w-auto object-contain opacity-90"
+                  />
+                  <Image
+                    src="/jci.png"
+                    alt="JCI logo"
+                    width={80}
+                    height={50}
+                    className="h-8 md:h-12 lg:h-16 w-auto object-contain opacity-90"
+                  />
+                  <Image
+                    src="/trophy.png"
+                    alt="Trophy logo"
+                    width={80}
+                    height={50}
+                    className="h-8 md:h-12 lg:h-16 w-auto object-contain opacity-90"
+                  />
+                  <Image
+                    src="/landrite.png"
+                    alt="Landrite logo"
+                    width={100}
+                    height={50}
+                    className="h-8 md:h-12 lg:h-16 w-auto object-contain opacity-90"
+                  />
+                  <Image
+                    src="/ui.png"
+                    alt="UI logo"
+                    width={120}
+                    height={50}
+                    className="h-8 md:h-12 lg:h-16 w-auto object-contain opacity-90"
+                  />
+                  <Image
+                    src="/jj.png"
+                    alt="JJ Classics logo"
+                    width={80}
+                    height={50}
+                    className="h-8 md:h-12 lg:h-16 w-auto object-contain opacity-90"
+                  />
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

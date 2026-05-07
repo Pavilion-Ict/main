@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className={`w-full h-16 px-4 md:px-13 flex items-center justify-between text-[18px] relative ${inter.className}`}>
       <div className="flex items-center">
-        <Image src="/Pavilion.png" alt="Pavilion logo" width={100} height={100} className="md:w-[120px]" />
+        <Image src="/pavilion.png" alt="Pavilion logo" width={100} height={100} className="md:w-[120px]" />
       </div>
 
       {/* Desktop Menu */}
@@ -79,9 +79,9 @@ const Navbar = () => {
           );
         })}
         <div className="bg-linear-to-r from-blue-200 to-blue-300 p-[1.3px] rounded-full mt-4">
-          <button className="bg-white px-8 py-3 rounded-full w-full font-bold text-xl">
+          <Link href="https://wa.me/+2348188549945" className="bg-white px-8 py-3 rounded-full w-full font-bold text-xl">
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
