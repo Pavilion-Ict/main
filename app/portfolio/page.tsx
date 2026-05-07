@@ -80,13 +80,13 @@ const PavilionPortfolio = () => {
             placeholder="Search projects..."
             className="w-full bg-gray-100 border-none rounded-full py-4 px-6 focus:ring-2 focus:ring-purple-400 outline-none"
           />
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 bg-orange-500 p-2 rounded-full text-white">
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 bg-blue-300 p-2 rounded-full text-white">
             <Search size={20} />
           </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto mb-12 p-1 bg-[#dadada] rounded-2xl px-4 py-3 flex items-center gap-10 pr-8">
-        <Link href="https://wa.me/+2348188549945" className="bg-gradient-to-r from-orange-400 to-pink-500 text-white px-8 py-3 rounded-full  flex items-center gap-2">
+        <Link href="https://wa.me/+2348188549945" className="bg-gradient-to-r from-blue-200 to-blue-300 text-white px-8 py-3 rounded-full  flex items-center gap-2">
           Get Yours Done <span className="text-xl">➔</span>
         </Link>
         <p className="hidden md:block text-xs ">

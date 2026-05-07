@@ -41,6 +41,7 @@ const AboutPage = () => {
           width={200}
           alt="Pavilion office"
         />
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,6 +91,8 @@ const AboutPage = () => {
             text="A unified, tech-driven ecosystem where printing, branding, and business systems are seamless, affordable, and globally scalable."
           />
         </motion.div>
+        <Image src="/dev-icon.png" alt="Development Icon " height={400} width={400} className="w-30 hidden lg:block lg:absolute lg:right-0 lg:top-200" />
+        <Image src="/yellow-bag.png" alt="Shopping Bag Icon " height={400} width={400} className="w-60 hidden lg:block lg:absolute lg:left-0 lg:top-250" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
