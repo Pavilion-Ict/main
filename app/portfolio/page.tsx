@@ -154,7 +154,7 @@ const PavilionPortfolio = () => {
                 <p className="text-gray-600 leading-relaxed">
                   {selectedItem.description}
                 </p>
-                <button className="mt-8 bg-gradient-to-r from-pink-500 to-orange-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-shadow">
+                <button className="mt-8 bg-gradient-to-r from-blue-200 to-blue-300 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-shadow">
                   Get Started
                 </button>
               </div>
