@@ -11,8 +11,8 @@ interface ServiceCardProps{
 
 const ServiceCard = ({ ServiceText, src, alt, width, height }: ServiceCardProps) => {
   return (
-    <div className='flex flex-col items-center gap-4 text-center group'>
-        <div className='overflow-hidden rounded-xl'>
+    <div className='flex flex-col items-center gap-4 text-center group w-full'>
+        <div className='overflow-hidden rounded-xl w-full'>
             <Image 
               src={src} 
               alt={alt} 

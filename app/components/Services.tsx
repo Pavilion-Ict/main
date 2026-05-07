@@ -1,4 +1,3 @@
-import { section } from "framer-motion/m";
 import React from "react";
 import ServiceCard from "./ServiceCard";
 import localFont from "next/font/local";
