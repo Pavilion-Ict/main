@@ -43,10 +43,10 @@ const Navbar = () => {
         })}
       </div>
 
-      <div className="hidden md:block bg-linear-to-r from-blue-200 to-blue-300 p-[1.3px] rounded-full">
-        <button className="bg-white px-6 py-2 rounded-full w-full font-bold hover:bg-transparent hover:text-white transition-all cursor-pointer">
+      <div className="hidden md:block bg-linear-to-r py-3 from-blue-200 to-blue-300 p-[1.3px] rounded-full">
+        <Link href="/contact" className="bg-white px-5 py-3 rounded-full w-full font-bold hover:bg-transparent hover:text-white transition-all cursor-pointer">
           Contact Us
-        </button>
+        </Link>
       </div>
 
       {/* Mobile Menu Toggle */}
@@ -78,8 +78,8 @@ const Navbar = () => {
             </Link>
           );
         })}
-        <div className="bg-linear-to-r from-blue-200 to-blue-300 p-[1.3px] rounded-full mt-4">
-          <Link href="https://wa.me/+2348188549945" className="bg-white px-8 py-3 rounded-full w-full font-bold text-xl">
+        <div className="bg-linear-to-r from-blue-200 py-3 to-blue-300 p-[1.3px] rounded-full mt-4">
+          <Link href="/contact" className="bg-white px-8 py-3 hover:bg-transparent hover:text-white transition-all cursor-pointer rounded-full w-full font-bold text-xl">
             Contact Us
           </Link>
         </div>

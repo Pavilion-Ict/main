@@ -85,7 +85,7 @@ const Hero = () => {
         </div>
 
         {/* TRUSTED BY Section */}
-        <div className="flex flex-col absolute bg-linear-to-r from-blue-400/10 to-blue-200 w-[95%] lg:w-[80%] min-h-[120px] lg:h-[150px] rounded-xl bottom-[-60px] lg:bottom-[-30px] left-[2.5%] lg:left-[10%] py-4 px-2 shadow-xl z-20 overflow-hidden">
+        <div className="flex flex-col absolute bg-linear-to-r from-blue-400 to-blue-200 w-[95%] lg:w-[80%] min-h-[120px] lg:h-[150px] rounded-xl bottom-[-60px] lg:bottom-[-30px] left-[2.5%] lg:left-[10%] py-4 px-2 shadow-xl z-20 overflow-hidden">
           <div className="flex items-center justify-center gap-2 mb-4 lg:mb-6">
             <div className="w-8 md:w-12 border-t border-[#4293EF]"></div>
             <p className="text-white italic text-xs md:text-sm font-medium tracking-widest uppercase">
