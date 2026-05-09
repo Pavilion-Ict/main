@@ -96,13 +96,8 @@ It also uses smart, strategic elements like the fingerprint in “VOTE” to add
 
 const PavilionPortfolio = () => {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-  
-  // Changed default filter to "All" so users can see everything when they first land
   const [activeFilter, setActiveFilter] = useState("All");
-  
-  // NEW: State for the search query
   const [searchQuery, setSearchQuery] = useState("");
-  
   const [currentHeroImageIndex, setCurrentHeroImageIndex] = useState(0);
 
   useEffect(() => {
@@ -117,7 +112,6 @@ const PavilionPortfolio = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  // NEW: Filter logic applying both the search query (partial match) and the category tab
   const filteredItems = portfolioItems.filter((item) => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = activeFilter === "All" || item.category === activeFilter;
@@ -163,7 +157,6 @@ const PavilionPortfolio = () => {
         {/* Filter & Search Bar */}
         <div className="max-w-7xl mx-auto mb-12">
           <div className="flex flex-wrap gap-3 mb-6">
-            {/* Added "All" to the tab list */}
             {["All", "Designs", "Web Dev", "Printing"].map((tab) => (
               <button
                 key={tab}
@@ -183,7 +176,6 @@ const PavilionPortfolio = () => {
             <input
               type="text"
               placeholder="Search projects..."
-              // Tied the input value to the searchQuery state
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-gray-100 border-none rounded-full py-4 px-6 focus:ring-2 focus:ring-purple-400 outline-none"
@@ -206,13 +198,11 @@ const PavilionPortfolio = () => {
         </div>
         
         {/* Portfolio Masonry Grid */}
-        {/* CHANGED: Replaced grid classes with columns-1 md:columns-2 lg:columns-3 */}
         <div className="max-w-7xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
           {filteredItems.length > 0 ? (
             filteredItems.map((item) => (
               <div
                 key={item.id}
-                // CHANGED: Added break-inside-avoid, inline-block, w-full, and mb-8 to prevent splitting across columns
                 className="group cursor-pointer break-inside-avoid inline-block w-full mb-8"
                 onClick={() => setSelectedItem(item)}
               >
@@ -220,7 +210,6 @@ const PavilionPortfolio = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    // CHANGED: Removed h-full object-contain, added h-auto so the image dictates its own height naturally
                     className="w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -241,44 +230,64 @@ const PavilionPortfolio = () => {
           )}
         </div>
 
-        {/* More Info Modal */}
+     {/* More Info Modal */}
         {selectedItem && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+            
+            {/* Backdrop */}
             <div
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity"
               onClick={() => setSelectedItem(null)}
             />
-            <div className="relative bg-white overflow-y-auto no-scrollbar max-h-[90vh] w-full max-w-2xl rounded-[2.5rem] shadow-2xl animate-in fade-in zoom-in duration-200">
+            
+            {/* Modal Container: Strict flex-col for mobile, flex-row for desktop */}
+            <div className="relative w-full max-w-5xl bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh] z-10 animate-in fade-in zoom-in duration-200">
+              
+              {/* Close Button */}
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute right-6 top-6 z-10 p-2 bg-gray-100/80 backdrop-blur-sm rounded-full hover:bg-gray-200 transition-colors"
+                className="absolute right-4 top-4 sm:right-6 sm:top-6 z-50 p-2 bg-gray-100/90 hover:bg-gray-200 text-gray-800 rounded-full transition-colors shadow-sm"
               >
                 <X size={20} />
               </button>
 
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/2 h-64 md:h-auto">
-                  <img
-                    src={selectedItem.image}
-                    className="w-full object-contain"
-                    alt={selectedItem.title}
-                  />
-                </div>
-                <div className="p-10 md:w-1/2">
-                  <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">
+              {/* Left/Top Side: Image Area */}
+              {/* On mobile, this strictly takes 40% of screen height. On desktop, it adjusts naturally. */}
+              <div className="w-full md:w-1/2 h-[40vh] md:h-auto bg-gray-50 relative shrink-0 border-b md:border-b-0 md:border-r border-gray-100">
+                <img
+                  src={selectedItem.image}
+                  className="absolute inset-0 w-full h-full object-contain p-4 md:p-8 drop-shadow-sm"
+                  alt={selectedItem.title}
+                />
+              </div>
+
+              {/* Right/Bottom Side: Text & Content Area */}
+              {/* Takes the remaining space and handles its own scrolling */}
+              <div className="w-full md:w-1/2 flex flex-col bg-white overflow-y-auto no-scrollbar relative">
+                
+                {/* Text Content */}
+                <div className="p-6 sm:p-10 flex-1">
+                  <span className="text-orange-500 font-bold text-xs sm:text-sm tracking-widest uppercase mb-2 block">
                     Project Detail
                   </span>
-                  <h2 className="text-3xl font-extrabold mt-2 mb-4">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold mb-4 text-gray-900 leading-tight">
                     {selectedItem.title}
                   </h2>
-                  {/* Preserving newlines in description */}
-                  <p className="text-gray-600 leading-relaxed whitespace-pre-line">
+                  <p className="text-gray-600 leading-relaxed whitespace-pre-line text-sm sm:text-base">
                     {selectedItem.description}
                   </p>
-                  <Link href="https://wa.me/+2348188549945" className="inline-block mt-8 bg-gradient-to-r from-blue-200 to-blue-300 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transition-shadow">
-                    Get Started
+                </div>
+
+                {/* Sticky CTA Button at the bottom */}
+                <div className="p-6 sm:p-10 pt-0 sticky bottom-0 bg-white border-t border-white shadow-[0_-10px_15px_-3px_rgba(255,255,255,1)]">
+                  <Link 
+                    href="https://wa.me/+2348188549945" 
+                    className="flex justify-center items-center w-full sm:w-auto bg-gradient-to-r from-blue-200 to-blue-300 hover:from-blue-300 hover:to-blue-400 text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all"
+                  >
+                    Get Yours Done
                   </Link>
                 </div>
+                
               </div>
             </div>
           </div>
