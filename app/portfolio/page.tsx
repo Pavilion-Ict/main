@@ -138,13 +138,13 @@ const PavilionPortfolio = () => {
             </p>
           </div>
 
-          <div className="w-full md:w-1/2 h-64 md:h-[400px] bg-gradient-to-br from-purple-100 to-blue-50 rounded-[3rem] flex items-center justify-center relative overflow-hidden shadow-inner">
+          <div className="w-full md:w-1/2 h-64 md:h-[400px] bg-gradient-to-br from-purple-100 to-blue-50 rounded-[1rem] lg:rounded-[3rem] flex items-center justify-center relative overflow-hidden shadow-inner">
             {heroImages.map((src, index) => (
               <img
                 key={src}
                 src={src}
                 alt={`Pavilion 3D Visual ${index + 1}`}
-                className={`absolute rounded-[3rem] w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                className={`absolute  w-full h-full  duration-1000 ease-in-out ${
                   index === currentHeroImageIndex ? "opacity-100" : "opacity-0"
                 }`}
               />
