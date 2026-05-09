@@ -32,13 +32,25 @@ const portfolioItems: PortfolioItem[] = [
     category: "Designs",
     image: "/gallery-1.png",
     description:
-      "A vibrant visual identity designed for campus-based creative groups.",
+      `Printing Services, Delivered to Your Door
+At Pavilion, we make academic printing effortless. Whether you need textbooks, lecture slides, course materials, or questionnaires, we handle the printing and deliver directly to you — starting from just ₦10 per page.
+Why choose Pavilion?
+  • ✅ Affordable pricing from ₦10/page
+  • ✅ Free delivery to your location in UI & UNILAG
+  • ✅ Fast, reliable, and convenient
+  • ✅ Order instantly via WhatsApp
+Skip the print shop. Simply send your files on WhatsApp, and we’ll take care of the rest.
+
+Material: 70gm Paper
+Printing: Black and White Laserjet Printer
+
+Delivery: 24hrs within Lagos & Ibadan, 2-3 working days for other state in Nigeria`,
   },
   {
     id: 2,
-    title: "Branded Packaging Nylon",
+    title: "Medium Size Branded Poly Nylon (2 colours print)",
     category: "Printing",
-    image: "/gallery-1.png", 
+    image: "/gallery-7.png", 
     description: `Make every purchase feel premium with our black & gold branded nylon—a perfect blend of elegance, durability, and brand visibility. Designed to stand out, the rich black finish paired with bold gold print instantly communicates class, making your packaging as valuable as the product inside.
 
 Material: Black 20inches by 15.5inches Poly bag (Available in different colours)
@@ -59,6 +71,25 @@ Delivery: 3-5 working days within Lagos & Ibadan, 5-7 working days for other sta
 📌 Gift Items and Sourvenirs (Frames, Throw Pillows, Mugs, Customized Key holders, etc.)
 🚵‍♂️🚵‍♂️ In celebration if our 7th Anniversary, evening doorstep delivery will be FREE FOR THE YEAR😎
 `,
+  },
+    {
+    id: 4,
+    title: "Political Campaign Flyer Design",
+    category: "Printing",
+    image: "/gallery-6.png",
+    description:
+      `This flyer delivers a clean, professional look with strong visual hierarchy, ensuring key information is seen instantly. The balanced layout and clear candidate image build credibility and make the design easy to understand at a glance.
+
+It also uses smart, strategic elements like the fingerprint in “VOTE” to add meaning and memorability, while the color scheme and typography reinforce trust and readability. Overall, it’s a polished, versatile design suitable for both print and digital campaigns.`,
+  },
+      {
+    id: 5,
+    title: "Political Campaign Flyer Design",
+    category: "Printing",
+    image: "/gallery-6.png",
+    description:
+      `This flyer delivers a clean, professional look with strong visual hierarchy, ensuring key information is seen instantly. The balanced layout and clear candidate image build credibility and make the design easy to understand at a glance.
+It also uses smart, strategic elements like the fingerprint in “VOTE” to add meaning and memorability, while the color scheme and typography reinforce trust and readability. Overall, it’s a polished, versatile design suitable for both print and digital campaigns.`,
   },
     
 ];
@@ -174,21 +205,23 @@ const PavilionPortfolio = () => {
           </p>
         </div>
         
-        {/* Portfolio Grid */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Replaced portfolioItems.map with filteredItems.map */}
+        {/* Portfolio Masonry Grid */}
+        {/* CHANGED: Replaced grid classes with columns-1 md:columns-2 lg:columns-3 */}
+        <div className="max-w-7xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8">
           {filteredItems.length > 0 ? (
             filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="group cursor-pointer"
+                // CHANGED: Added break-inside-avoid, inline-block, w-full, and mb-8 to prevent splitting across columns
+                className="group cursor-pointer break-inside-avoid inline-block w-full mb-8"
                 onClick={() => setSelectedItem(item)}
               >
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden mb-4 transition-transform duration-300 group-hover:scale-[1.02]">
+                <div className="relative rounded-3xl overflow-hidden mb-4 transition-transform duration-300 group-hover:scale-[1.02]">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-contain"
+                    // CHANGED: Removed h-full object-contain, added h-auto so the image dictates its own height naturally
+                    className="w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="bg-white text-black px-6 py-2 rounded-full font-bold flex items-center gap-2">
@@ -202,7 +235,6 @@ const PavilionPortfolio = () => {
               </div>
             ))
           ) : (
-            // Added a fallback state if the search yields no results
             <div className="col-span-full text-center py-12 text-gray-500">
               No projects found matching your search.
             </div>
