@@ -47,7 +47,7 @@ Delivery: 3-5 working days within Lagos & Ibadan, 5-7 working days for other sta
 `,
   },
       {
-    id: 1,
+    id: 3,
     title: " Pavilion Flyer",
     category: "Designs",
     image: "/gallery-3.png",
