@@ -17,7 +17,9 @@ const Footer = () => {
             We provide complete digital, branding, and printing solutions that
             help businesses build, launch, and grow with confidence.
           </p>
-          <p className="font-bold underline">12 Akintoba St, Agbowo, Ibadan 200132, Oyo</p>
+          <p className="font-bold underline">
+            12 Akintoba St, Agbowo, Ibadan 200132, Oyo
+          </p>
         </div>
         <div className="mt-5 md:mt-0">
           <div className="flex gap-6">
@@ -26,30 +28,37 @@ const Footer = () => {
             <Link href="/portfolio">Portfolio</Link>
           </div>
           <div className="flex gap-4 md:justify-end mt-3">
-            <Image
-              src="/instagram.png"
-              height={30}
-              width={30}
-              alt="Social Media Icons"
-            />
-            <Image
-              src="/facebook.png"
-              height={30}
-              width={30}
-              alt="Social Media Icons"
-            />
-            <Image
+            <Link href="https://www.instagram.com/pavilionict">
+              <Image
+                src="/instagram.png"
+                height={30}
+                width={30}
+                alt="Social Media Icons"
+              />
+            </Link>
+            <Link href="https://www.facebook.com/profile.php?id=100063812815375&mibextid=wwXlfr">
+              <Image
+                src="/facebook.png"
+                height={30}
+                width={30}
+                alt="Social Media Icons"
+              />
+            </Link>
+          <Link href="https://wa.me/+2348188549945">
+             <Image
               src="/whatsapp.png"
               height={30}
               width={30}
               alt="Social Media Icons"
-            />
+            />         
+          </Link>
+{/* 
             <Image
               src="/linkedin.png"
               height={30}
               width={30}
               alt="Social Media Icons"
-            />
+            /> */}
           </div>
         </div>
       </div>
