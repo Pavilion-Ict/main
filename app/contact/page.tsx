@@ -116,12 +116,12 @@ const ContactPage = () => {
 
           {/* Right Side: Embedded Tawk.to Chat */}
           {/* I matched the soft pink background from the screenshot, but you can change 'bg-[#ffdce5]' to 'bg-blue-50' if you prefer Pavilion colors */}
-         <div className="w-full md:w-1/2 bg-blue-50 p-8 md:p-16 flex flex-col">
+         <div className="w-full md:w-1/2 bg-blue-50 p-3 md:p-16 flex flex-col">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900 text-center md:text-left">
               Live Chat Support
             </h2>
             
-            <div className="flex-1 min-h-[450px] w-full bg-white rounded-2xl shadow-inner overflow-hidden border border-white/50 relative">
+            <div className="flex-1 min-h-[550px] md:min-h-[450px] w-full bg-white rounded-2xl shadow-inner overflow-hidden border border-white/50 relative">
               {/* Fallback loading text underneath the iframe just in case network is slow */}
               <div className="absolute inset-0 flex items-center justify-center text-gray-400 -z-10">
                 <div className="flex flex-col items-center gap-3">
@@ -133,7 +133,7 @@ const ContactPage = () => {
               {/* ⚠️ REPLACE THIS SRC WITH YOUR DIRECT CHAT LINK */}
               <iframe 
                 src="https://tawk.to/chat/69f3433d81f6d41c3ddd1bd9/1jnf3taib"
-                className="w-full h-full border-0 bg-transparent"
+                className="w-full h-full absolute inset-0 border-0 bg-transparent"
                 title="Pavilion Live Chat"
               />
             </div>
