@@ -20,9 +20,9 @@ const Services = () => {
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 items-start justify-center w-full max-w-6xl">
+          <ServiceCard ServiceText="Web & Mobile Development" src="/product.png" alt="Product Development" width={200} height={100} />
           <ServiceCard ServiceText="Printing services" src="/printing.png" alt="Digital Solutions" width={200} height={100} />
           <ServiceCard ServiceText="Branding & Design" src="/branding.png" alt="Printing Services" width={200} height={100} />
-          <ServiceCard ServiceText="Product Development" src="/product.png" alt="Product Development" width={200} height={100} />
           <ServiceCard ServiceText="E-Cafe Services" src="/ecafe.png" alt="E-Cafe Services" width={200} height={100} />
       </div>
     </section>
