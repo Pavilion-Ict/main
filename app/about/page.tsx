@@ -193,7 +193,7 @@ const AboutPage = () => {
             <TeamMemberCard
               src="/Al-Ameen Oladejo.png"
               alt="Al-Ameen"
-              name="Al-Ameen Oladejo"
+              name="Al-Ameen Wisdom Oladejo"
               role="Founder / Product Manager"
               email=""
               height={100}
