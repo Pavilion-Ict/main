@@ -195,7 +195,7 @@ const AboutPage = () => {
               alt="Al-Ameen"
               name="Al-Ameen Wisdom Oladejo"
               role="Founder / Product Manager"
-              email=""
+              email="wisdomola@pavilionict.com"
               height={100}
               width={200}
               position={1}
@@ -217,14 +217,14 @@ const AboutPage = () => {
               role="Lead Product Developer"
               height={100}
               width={200}
-              email="ireanuoluwah@gmail.com"
+              email="ireanu@pavilionict.com"
               position={2}
             />
             <TeamMemberCard
-              src="/Ojie_Joseph.png"
-              alt="Ojie Joseph"
-              name="Ojie Joseph"
-              role="Graphic and Product Design"
+              src="/samuel-babalola.png"
+              alt=""
+              name="Samuel Babalola"
+              role="Graphic Designer and Brand identity designer"
               height={100}
               width={200}
               email=""
