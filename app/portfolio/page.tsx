@@ -342,7 +342,7 @@ const PavilionPortfolio = () => {
                 {/* Sticky CTA Button at the bottom */}
                 <div className="p-6 sm:p-10 pt-0 sticky bottom-0 bg-white border-t border-white shadow-[0_-10px_15px_-3px_rgba(255,255,255,1)]">
                   <Link
-                    href="https://wa.me/+2348188549945"
+                    href="/contact"
                     className="flex justify-center items-center w-full sm:w-auto bg-gradient-to-r from-blue-200 to-blue-300 hover:from-blue-300 hover:to-blue-400 text-white px-8 py-4 rounded-full font-bold shadow-lg transition-all"
                   >
                     Get Yours Done

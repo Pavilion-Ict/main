@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import React, { useEffect } from "react";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ContactPage = () => {
   useEffect(() => {
@@ -107,8 +108,7 @@ const ContactPage = () => {
                   href="https://wa.me/+2348188549945"
                   className="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-700 transition-colors"
                 >
-                  <MessageCircle size={20} className="text-green-500" />
-                  Chat on WhatsApp
+                  <Image src="/WhatsAppButtonGreenLarge.png" alt="Chat on WhatsApp" height={300} width={300} />
                 </Link>
               </div>
             </div>
